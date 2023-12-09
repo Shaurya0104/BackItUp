@@ -1,8 +1,8 @@
 const AIRSTACK_API_URL = "https://api.airstack.xyz/graphql";
-const AIRSTACK_API_KEY = "<INSERT API KEY HERE";
+const AIRSTACK_API_KEY = "<INSERT API KEY HERE>";
 const query = `query MyQuery {
     Polygon: TokenTransfers(
-        input: {filter: {from: {_eq: "${address}"}}, blockchain: "${chainID}", limit: 1, order: {blockTimestamp: DESC}}
+        input: {filter: {from: {_eq: "${address}"}}, blockchain: polygon, limit: 1, order: {blockTimestamp: DESC}}
     ) {
         TokenTransfer {
             blockTimestamp
