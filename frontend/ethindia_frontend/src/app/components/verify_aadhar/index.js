@@ -51,8 +51,7 @@ export default function Verify_aadhar() {
 
     console.log("extracted", extractedData)
     if (extractedData instanceof Error) throw new Error(extractedData.message);
-    
-    // let appIdBigInt = '196700487049306364386084600156231018794323017728'
+
     let appIdBigInt = '609246576999142755181287323616835836365844250624'
   
     let witnessInputs = {
@@ -79,10 +78,10 @@ export default function Verify_aadhar() {
     let b = proof.b
     let c = proof.c
     let Input = proof.Input
-    console.log("a= ", a)
-    console.log("b= ", b)
-    console.log("c= ", c)
-    console.log('Input= ', Input)
+    
+    
+
+
   };
 
   return (

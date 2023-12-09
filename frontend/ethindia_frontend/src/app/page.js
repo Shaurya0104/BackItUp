@@ -20,6 +20,10 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 
 export default function Home() {
   return (
+    <AnonAadhaarProvider
+      _appId={"609246576999142755181287323616835836365844250624"}
+      _testing={true}
+    >
       <div>
         <main className="flex top-24 min-h-screen flex-col items-center md:px-12 py-4 px-4 overflow-x-hidden">
           <Header></Header>
@@ -39,5 +43,6 @@ export default function Home() {
           <Your_contracts_dashboard></Your_contracts_dashboard>
         </main>
       </div>
+    </AnonAadhaarProvider>
   );
 }
