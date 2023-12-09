@@ -79,6 +79,30 @@ input:checked ~ label::before {
   justify-content: center;
 }
 
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.index_box{
+  animation: float 2s ease-in-out infinite;
+}
+
+.index_box2{
+  animation: float 3s ease-in-out infinite;
+}
+
+.index_box3{
+  animation: float 2.5s ease-in-out infinite;
+}
 .index_line {
   color: #222222;
   padding-bottom: 1vw;
