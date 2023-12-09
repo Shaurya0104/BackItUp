@@ -29,9 +29,9 @@ await anonAadhaarVerifier.waitForDeployment();
  const funds = "10";
  const delay = "0";
  const verifierAddress = anonAadhaarVerifier.getAddress();
- const executor1Nullifier = "5465468435464854";
- const executor2Nullifier = "654546444646846464";
- const beneficiaryNullifier = "654546446498";
+ const executor1Nullifier = "8342611605558802468582569879314199988106501944757509573088422314952680209705";
+ const executor2Nullifier = "10655706780475660315368236249496825506536068114802302124989010119522849142676";
+ const beneficiaryNullifier = "9999046083161807991207948004694129209214019014658775265663935807423678754738";
  
  const deployBackupContractTx = await projName.deployBackupContract(
   tokenAddress,
@@ -43,8 +43,12 @@ await anonAadhaarVerifier.waitForDeployment();
   beneficiaryNullifier
  );
 
+ const spenderAddress = "BackupContractAddress"; // change this accordingl [Important] @0xn4utilus
 
-
+// Call the approve function
+const approveTx = await token.approve(spenderAddress, funds);
+await approveTx.wait();
+console.log(`Approval done for address: ${spenderAddress}`);
 }
 
 main()
