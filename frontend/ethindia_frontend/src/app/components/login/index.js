@@ -67,9 +67,9 @@ function Login() {
   };
 
   const handleVerifyButton = async () => {
-    const providerWallet = new ethers.BrowserProvider(window.ethereum,11155111);
+    const providerWallet = new ethers.BrowserProvider(window.ethereum,1442);
     let  signerWallet = await providerWallet.getSigner();
-    let  verifierAddress = "0x955987BBC2614c6F41977C66cc89f8E6866F6D76";
+    let  verifierAddress = "0xfACb2130CAeEd7A0f9C7b8528F27094e1bA04887";
     // const signerWallet = await providerWallet.getSigner();
     // console.log("tokenAddress", tokenAddress);
     console.log("Signer ", signerWallet);
@@ -118,7 +118,7 @@ function Login() {
     );
 
     async function verify() {
-      let tx = await verifierContract.verifyProof([1,1], zkB, zkC, zkInput);
+      let tx = await verifierContract.verifyProof(zkA, zkB, zkC, zkInput);
       try {
         
       } catch (error) {
@@ -126,7 +126,13 @@ function Login() {
       }
     }
     verify();
+    sendToServer();
   };
+
+  const sendToServer = async () => {
+
+  }
+
 
   return (
     <>
