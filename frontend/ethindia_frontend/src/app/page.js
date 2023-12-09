@@ -35,7 +35,7 @@ export default function Home() {
           <Page2></Page2>
           <Edit_contracts></Edit_contracts>
           <Delete_contract></Delete_contract>
-          <Verify_aadhar></Verify_aadhar>
+          {/* <Verify_aadhar></Verify_aadhar> */}
           <Logout_model></Logout_model>
           <Create_new_contract></Create_new_contract>
           <Network_model></Network_model>
