@@ -127,7 +127,7 @@ function Login() {
  
   return (
     <>
-      <button className="navButton" onClick={() => setOpenModal(true)}>
+      <button className="navButton font-[600] border-[2px] border-[#1f013d]" onClick={() => setOpenModal(true)}>
         Login to continue
       </button>
       <Modal
