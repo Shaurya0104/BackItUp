@@ -12,14 +12,15 @@ export async function fetchKey(keyURL){
 }
 
 const hi = async () => {
-  const testFile = './guardian1.pdf'
+  const testFile = './beneficiary.pdf'
   const pdfRaw = fs.readFileSync(testFile)
   const pdfBuffer = Buffer.from(pdfRaw)
-  const extractedData = await extractWitness(pdfBuffer, 'guardian1123')
+  const extractedData = await extractWitness(pdfBuffer, 'beneficiary123')
 
   if (extractedData instanceof Error) throw new Error(extractedData.message)
 
-  let appIdBigInt = '196700487049306364386084600156231018794323017728'
+  // let appIdBigInt = '196700487049306364386084600156231018794323017728'
+  let appIdBigInt = '609246576999142755181287323616835836365844250624'
 
   let witnessInputs = {
     signature: splitToWords(extractedData.sigBigInt, BigInt(64), BigInt(32)),
