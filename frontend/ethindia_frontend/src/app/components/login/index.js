@@ -1,4 +1,3 @@
-"use client";
 import { Button, Modal } from "flowbite-react";
 import { useState, useEffect } from "react";
 import {
@@ -7,9 +6,8 @@ import {
   AnonAadhaarProof,
 } from "anon-aadhaar-react";
 import { exportCallDataGroth16FromPCD } from "anon-aadhaar-pcd";
-import axios, * as others from "axios";
-// const { ethers } = require("ethers");
-const ethers = require("ethers");
+import axios from "axios";
+import { ethers } from "ethers";
 
 function Login() {
   const [openModal, setOpenModal] = useState(false);
@@ -48,33 +46,31 @@ function Login() {
       console.log("no extension found");
     } else {
       const accounts = await window.ethereum
-      .request({
-        method: "wallet_requestPermissions",
-        params: [
-          {
-            eth_accounts: {},
-          },
-        ],
-      })
-      .then(() =>
-        window.ethereum.request({
-          method: "eth_requestAccounts",
+        .request({
+          method: "wallet_requestPermissions",
+          params: [
+            {
+              eth_accounts: {},
+            },
+          ],
         })
-      );
-    setAccount(accounts[0]);
-    console.log("Account changed to: ", accounts[0]);
+        .then(() =>
+          window.ethereum.request({
+            method: "eth_requestAccounts",
+          })
+        );
+      setAccount(accounts[0]);
+      console.log("Account changed to: ", accounts[0]);
     }
   };
 
   const handleVerifyButton = async () => {
-    const providerWallet = new ethers.BrowserProvider(window.ethereum,1442);
-    let  signerWallet = await providerWallet.getSigner();
-    let  verifierAddress = "0xfACb2130CAeEd7A0f9C7b8528F27094e1bA04887";
-    // const signerWallet = await providerWallet.getSigner();
-    // console.log("tokenAddress", tokenAddress);
+    const providerWallet = new ethers.BrowserProvider(window.ethereum);
+    const signerWallet = await providerWallet.getSigner();
+    let verifierAddress = "0xfACb2130CAeEd7A0f9C7b8528F27094e1bA04887";
     console.log("Signer ", signerWallet);
-    
     let verifierABI = [
+      // Your verifierABI content...
       {
         inputs: [
           {
@@ -109,7 +105,7 @@ function Login() {
         stateMutability: "view",
         type: "function",
       },
-    ]
+    ];
 
     let verifierContract = new ethers.Contract(
       verifierAddress,
@@ -117,23 +113,18 @@ function Login() {
       signerWallet
     );
 
-    async function verify() {
-      let tx = await verifierContract.verifyProof(zkA, zkB, zkC, zkInput);
-      try {
+    verifierContract.verifyProof(zkA, zkB, zkC, zkInput)
+      .then((result) => {
+        console.log(result);
         
-      } catch (error) {
+      })
+      .catch((error) => {
         console.error("Can't Verify!", error);
-      }
-    }
-    verify();
-    sendToServer();
+      });
   };
 
-  const sendToServer = async () => {
-
-  }
-
-
+ 
+ 
   return (
     <>
       <button className="navButton font-[600] border-[2px] border-[#1f013d]" onClick={() => setOpenModal(true)}>
@@ -232,5 +223,4 @@ function Login() {
     </>
   );
 }
-
 export default Login;
