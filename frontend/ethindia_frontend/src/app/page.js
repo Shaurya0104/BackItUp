@@ -4,6 +4,7 @@ import Header from './components/header'
 import Login from './components/login'
 import Edit_contracts from './components/edit_contracts'
 import Delete_contract from './components/delete_contract'
+import Verify_aadhar from './components/verify_aadhar'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Login></Login>
       <Edit_contracts></Edit_contracts>
       <Delete_contract></Delete_contract>
+      <Verify_aadhar></Verify_aadhar>
     </main>
     </div>
   )
