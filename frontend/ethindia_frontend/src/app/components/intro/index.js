@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Login from "../login";
 
 export default function Intro() {
   const [isChecked, setIsChecked] = useState(true);
@@ -46,7 +47,7 @@ export default function Intro() {
             access to your wallet.
             {/* <div className="text-[#ffffff]">hello</div> */}
           </p>
-          <button className="navButton">Connect Wallet</button>
+          <Login></Login>
         </div>
         {/* <div className="text-[#fff] bg-[url'./images/whiteTick.png)] ">
             hello
