@@ -20,7 +20,8 @@
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18",
     "react-dropzone": "^14.2.3",
-    "react-modal": "^3.16.1"
+    "react-modal": "^3.16.1",
+    "spdf": "^0.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

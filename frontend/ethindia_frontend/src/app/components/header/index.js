@@ -12,7 +12,7 @@ export default function Header() {
     >
       <div className=" lg:min-w-[95vw] container flex flex-wrap justify-between items-center sticky">
         <div>
-          <img src="images/hackathon.svg" className="h-10 "></img>
+          <img src="\images\Logo (1).png" className="h-10 "></img>
         </div>
 
         <div

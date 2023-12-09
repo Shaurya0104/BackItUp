@@ -38,7 +38,6 @@ export default function Home() {
           <Topbar></Topbar>
           <Wallet_connect_model></Wallet_connect_model>
           <Wallet_model></Wallet_model>
-          <Wireframe_6></Wireframe_6>
           <Your_contracts_dashboard></Your_contracts_dashboard>
         </main>
       </div>

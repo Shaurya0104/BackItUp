@@ -231,3 +231,7 @@ input:checked ~ label::before {
 .modalLoginCustom > div {
   width: auto !important;
 }
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
