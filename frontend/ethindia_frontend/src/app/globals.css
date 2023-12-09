@@ -255,3 +255,6 @@ input:checked ~ label::before {
 .tempcheck{
   transform: scale(1.2);
 }
+hr{
+  border-color:#2c2c2c;
+}

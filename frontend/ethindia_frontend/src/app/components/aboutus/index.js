@@ -15,8 +15,8 @@ const teamMembers = [
   },
   {
     name: 'Prakhar Singh',
-    devfolioLink: 'https://devfolio.co/',
-    imageSrc: '/jane_smith.jpg', // Replace with actual image path or URL
+    devfolioLink: 'https://devfolio.co/@prakhar97',
+    imageSrc: '/images/WhatsApp Image 2023-12-10 at 03.52.49_5037c47a.jpg', // Replace with actual image path or URL
   },
   {
     name: 'Shaurya Priyadarshi',
@@ -35,10 +35,10 @@ const AboutPage = () => {
   return (
     <div className="flex flex-col justify-center items-center bg-transparent w-[60vw]">
       <div className=" w-full p-6 text-[#fff]">
-        <h1 className="text-4xl font-bold mb-8">About Us</h1>
+        <h1 className="text-4xl font-bold mb-8 text-[#6543D0]">The Team</h1>
         <div className="space-y-6">
           {teamMembers.map((member, index) => (
-            <div key={index} className="bg-transparent border-[1px] border-[#6543D0] rounded-lg shadow-md p-6 flex items-center">
+            <div key={index} className="bg-transparent border-[1px] border-[#2c2c2c] rounded-lg shadow-md p-6 flex items-center">
               <img
                 src={member.imageSrc}
                 alt={member.name}
