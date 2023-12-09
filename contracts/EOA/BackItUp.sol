@@ -10,7 +10,7 @@ import "./IPUSHCommInterface.sol";
 import "./IAnonAadhaarVerifier.sol";
 // Define the contract
 
-contract ProjectName {
+contract BackItUp {
    // Use SafeERC20 for ERC20
    using SafeERC20 for ERC20;
    address public anonAadhaarVerifierAddr;
@@ -171,7 +171,7 @@ contract ProjectName {
             timestamp = block.timestamp + delay;
 
         }
-        if(state ==1 && (_pubSignals[0]== executor1 || _pubSignals[0] == executor2)){
+        else if(state ==1 && (_pubSignals[0]== executor1 || _pubSignals[0] == executor2)){
             state =2;
             require(unlocker1 != _pubSignals[0], "same executor");
             timestamp = block.timestamp + delay;

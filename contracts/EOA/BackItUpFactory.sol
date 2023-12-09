@@ -8,12 +8,12 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 // Import the IERC20 interface from OpenZeppelin
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 // Import the XYZ contract
-import "./ProjectName.sol";
+import "./BackItUp.sol";
 // Import the Withdrawable contract
 import "./Withdrawable.sol";
 
 // Define the XYZser contract that inherits from Withdrawable
-contract ProjName is Withdrawable {
+contract BackItUpFactory is Withdrawable {
    // Define the service fee of the contract
    uint256 public serviceFee;
    // Define the creator address of the contract
@@ -50,7 +50,7 @@ contract ProjName is Withdrawable {
       require(_tokenAddress != address(0), "Zero address not allowed for token");
     creatorAddress = msg.sender;
       // Deploy a new XYZ contract
-      ProjectName backupContract = new ProjectName(
+      BackItUp backupContract = new BackItUp(
           _tokenAddress,
           _delay,
           funds,
