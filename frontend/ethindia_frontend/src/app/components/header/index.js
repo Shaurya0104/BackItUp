@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Login from "../login";
 export default function Header() {
   let [navBarOpen, setNavBar] = useState(false);
 
@@ -19,7 +20,7 @@ export default function Header() {
             "pr-5 hidden md:block inline float-right  justify-items space-x-12 text-[16px]"
           }
         >
-          <button className="navButton" >Connect Wallet</button>
+         <Login></Login>
         </div>
 
         <button

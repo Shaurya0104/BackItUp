@@ -10,9 +10,17 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "anon-aadhaar-pcd": "^0.1.14",
+    "anon-aadhaar-react": "^0.1.14",
+    "ethers": "^6.9.0",
+    "flowbite": "^2.2.0",
+    "flowbite-react": "^0.7.0",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-bootstrap": "^2.9.1",
+    "react-dom": "^18",
+    "react-dropzone": "^14.2.3",
+    "react-modal": "^3.16.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
