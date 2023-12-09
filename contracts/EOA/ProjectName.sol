@@ -6,9 +6,10 @@ pragma solidity ^0.8.4;
 import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-
+import "./IPUSHCommInterface.sol";
 import "./IAnonAadhaarVerifier.sol";
 // Define the contract
+
 contract ProjectName {
    // Use SafeERC20 for ERC20
    using SafeERC20 for ERC20;
@@ -32,6 +33,8 @@ contract ProjectName {
 
    address public immutable tokenAddress;
    
+    address public ETH_SEP_COMM_ADDRESS = 0x0C34d54a09CFe75BCcd878A469206Ae77E0fe6e7;
+
    // Define the delay of the contract
    uint256 public immutable delay;
    // Define the initial timestamp of the contract
@@ -85,6 +88,52 @@ contract ProjectName {
         
    }
 
+ function notif() public {
+    IPUSHCommInterface(ETH_SEP_COMM_ADDRESS).sendNotification(
+            0xFD60035634DdE0BCb90e96ecD6D18d3c7Cde6a2B, // from channel
+            address(this), // to recipient, put address(this) in case you want Broadcast or Subset. For Targeted put the address to which you want to send
+            bytes(
+                string(
+                    // We are passing identity here: https://docs.epns.io/developers/developer-guides/sending-notifications/advanced/notification-payload-types/identity/payload-identity-implementations
+                    abi.encodePacked(
+                        "0", // this is notification identity: https://docs.epns.io/developers/developer-guides/sending-notifications/advanced/notification-payload-types/identity/payload-identity-implementations
+                        "+", // segregator
+                        "1", // this is payload type: https://docs.epns.io/developers/developer-guides/sending-notifications/advanced/notification-payload-types/payload (1, 3 or 4) = (Broadcast, targeted or subset)
+                        "+", // segregator
+                        "TESTSTSTST", // this is notification title
+                        "+", // segregator
+                        "~ SolRiders"// notification body
+                        
+                    )
+                )
+            )
+        );
+   }
+
+
+    function notify(string memory message) internal{
+
+        IPUSHCommInterface(ETH_SEP_COMM_ADDRESS).sendNotification(
+            0xFD60035634DdE0BCb90e96ecD6D18d3c7Cde6a2B, // from channel
+            address(this), // to recipient, put address(this) in case you want Broadcast or Subset. For Targeted put the address to which you want to send
+            bytes(
+                string(
+                    // We are passing identity here: https://docs.epns.io/developers/developer-guides/sending-notifications/advanced/notification-payload-types/identity/payload-identity-implementations
+                    abi.encodePacked(
+                        "0", // this is notification identity: https://docs.epns.io/developers/developer-guides/sending-notifications/advanced/notification-payload-types/identity/payload-identity-implementations
+                        "+", // segregator
+                        "1", // this is payload type: https://docs.epns.io/developers/developer-guides/sending-notifications/advanced/notification-payload-types/payload (1, 3 or 4) = (Broadcast, targeted or subset)
+                        "+", // segregator
+                        message, // this is notification title
+                        "+", // segregator
+                        "~ SolRiders"// notification body
+                        
+                    )
+                )
+            )
+        );
+    }
+    
    function verify(uint256[2] calldata _pA, uint[2][2] calldata _pB, uint[2] calldata _pC, uint[34] calldata _pubSignals) public view returns (bool) {
         return IAnonAadhaarVerifier(anonAadhaarVerifierAddr).verifyProof(_pA, _pB, _pC, _pubSignals);
     }
