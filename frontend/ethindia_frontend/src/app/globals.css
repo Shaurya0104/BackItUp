@@ -186,12 +186,15 @@ input:checked ~ label::before {
 
 
 .navButton {
-  padding: 0.5rem 1rem;
-  background-color: #6543d0;
+  padding: 0.75rem 1.25rem;
+  background-color: #462aa0;
   color: #fff;
   border: none;
-  border-radius: 7px;
+  border-radius: 10px;
   cursor: pointer;
+  /* border: #1f013d; */
+  /* border: 2px; */
+  /* font: ; */
 }
 
 .navButton:hover {
@@ -234,4 +237,14 @@ input:checked ~ label::before {
 
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
+}
+
+
+.top_blur{
+  position: fixed;
+  z-index: 9;
+  filter: blur(30px);
+  left: 0;
+  top: 0;
+
 }

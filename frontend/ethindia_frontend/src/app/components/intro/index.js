@@ -1,7 +1,11 @@
 import { useState } from "react";
 import Login from "../login";
 
+
+
 export default function Intro() {
+
+
   const [isChecked, setIsChecked] = useState(true);
 
   const handleCheckboxChange = (e) => {
@@ -22,12 +26,13 @@ export default function Intro() {
     : "rounded-[12px] border-[#2E175A] border-[2px] border-solid ";
   return (
     <>
+    <div className="top_blur  w-[100%] h-[8vh] bg-[#000] px-0 py-0 mx-0 my-0 text-[#000]"> </div>
       <div className="indexclass_ellipse1"></div>
       <div className="indexclass_ellipse2"></div>
       <div className="indexclass_background"></div>
       <div
         id="about"
-        className="scroll-mt-20 justify-center items-center mt-15 mb-25 "
+        className="scroll-mt-20 justify-center items-center my-10 py-10 "
       >
         <div className="py-10 items-center text-center md:space-y-[-1rem] ">
           <div className="index_heading tracking-tight text-[#ffffff]  leading-[-777px] ">
