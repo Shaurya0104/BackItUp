@@ -5,17 +5,17 @@ const { exec } = require("child_process");
 async function main() {
  const ProjName = await ethers.getContractFactory("ProjName");
  const projName = await ProjName.deploy(0); // Set initial service fee
- const Token = await ethers.getContractFactory("SolRiders");
+ const Token = await ethers.getContractFactory("SolRiders"); //token
  const token = await Token.deploy()
  const tokenAddress = token.getAddress();
  console.log("ProjName deployed to:", projName.target);
- const verifier = await ethers.deployContract("Verifier");
+ const verifier = await ethers.deployContract("Verifier"); //Verifier
  await verifier.waitForDeployment();
 
  const _verifierAddress = verifier.getAddress();
  // You can add more interactions here if needed
  const appId = BigInt(
-  "609246576999142755181287323616835836365844250624"
+  process.env.APP_ID
 ).toString();
 
 const anonAadhaarVerifier = await ethers.deployContract(
@@ -42,7 +42,7 @@ await anonAadhaarVerifier.waitForDeployment();
   executor2Nullifier,
   beneficiaryNullifier
  );
- 
+
 
 
 }
