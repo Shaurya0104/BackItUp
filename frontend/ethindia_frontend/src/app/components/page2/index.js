@@ -2,12 +2,11 @@ export default function Page2() {
   return (
     <div >
       <div className="page2_ellipse1">
-
       </div>
-      <div className="flex items-center justify-center z-10 ">
-        <div className="items-center rounded-[10px] flex justify-center border-[2px] border-[#2c2c2c] mx-3 h-[25rem] w-[25rem]">
-          <div className="page2_container_background h-[24.5rem] w-[24.5rem]"></div>
-          <div className="page2_container_background2 h-[24.5rem] w-[24.5rem]"></div>
+      <div className="flex items-center justify-center z-10  ">
+        <div className="items-center rounded-[10px] flex justify-center border-[2px] border-[#2c2c2c] mr-[3rem] h-[25rem] w-[32rem]">
+          <div className="page2_container_background h-[24.5rem] w-[31.5rem]"></div>
+          <div className="page2_container_background2 h-[24.5rem] w-[31.5rem]"></div>
           <div className="justify-center">
             <div className="page2_container justify-center flex  mb-6">
               <img src="/images/CurrencyEth.png" alt="not found" />
@@ -23,9 +22,9 @@ export default function Page2() {
             </div>
           </div>
         </div>
-        <div className=" items-center rounded-[10px] flex justify-center border-[2px] border-[#2c2c2c] mx-3 h-[25rem] w-[25rem]">
-          <div className="page2_container_background h-[24.5rem] w-[24.5rem]"></div>
-          <div className="page2_container_background2 h-[24.5rem] w-[24.5rem]"></div>
+        <div className=" items-center rounded-[10px] flex justify-center border-[2px] border-[#2c2c2c] ml-[3rem] h-[25rem] w-[32rem]">
+          <div className="page2_container_background h-[24.5rem] w-[31.5rem]"></div>
+          <div className="page2_container_background2 h-[24.5rem] w-[31.5rem]"></div>
           <div className="justify-center ">
             <div className="page2_container justify-center flex  mb-6">
               <img src="\images\CurrencyBtc.png" alt="not found" />
@@ -42,11 +41,12 @@ export default function Page2() {
           </div>
         </div>
       </div>
-      <div className="mt-10 mb-10">
-        <div className="h-[18rem] w-[51.5rem] border-[2px] rounded-[10px] border-[#2c2c2c] mx-3 flex justify-center items-center">
-        <div className="page2_container_background h-[17.5rem] w-[51rem]"></div>
-        <div className="page2_container_background2 h-[17.5rem] w-[51rem]"></div>
-          <div className="page2_line ">
+      <div className="mt-20 mb-10 ">
+        {/* <div className="h-[18rem] w-[51.5rem] border-[2px] rounded-[10px] border-[#2c2c2c] mx-3 flex justify-center items-center"> */}
+        <div className="h-[18rem] w-[70rem] border-[2px] rounded-[10px] border-[#2c2c2c] mx-3 flex justify-center items-center">
+        <div className="page2_container_background h-[17.5rem] w-[70rem]"></div>
+        <div className="page2_container_background2 h-[17.5rem] w-[70rem]"></div>
+          <div className="page2_line flex justify-center items-center">
             {" "}
             <img src="\images\Line 3L.svg" alt="not found " />
           </div>
@@ -80,10 +80,10 @@ export default function Page2() {
               </div>
               <div className="flex flex-col justify-center items-center">
                 <div className="text-[#999999] text-[10px]">
-                  You have irretrievably lost
+                Use without any restrictions.
                 </div>
                 <div className="text-[#999999] text-[10px]">
-                  access to your wallet or died{" "}
+                Spend, transfer and withdraw{" "}
                 </div>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function Page2() {
                   You have irretrievably lost
                 </div>
                 <div className="text-[#999999] text-[10px]">
-                  access to your wallet or died.{" "}
+                  access to your wallet {" "}
                 </div>
               </div>
             </div>
