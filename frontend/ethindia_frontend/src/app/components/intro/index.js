@@ -26,7 +26,7 @@ export default function Intro() {
       <div className="indexclass_background"></div>
       <div
         id="about"
-        className="scroll-mt-20 justify-center items-center my-15 "
+        className="scroll-mt-20 justify-center items-center mt-15 mb-25 "
       >
         <div className="py-10 items-center text-center md:space-y-[-1rem] ">
           <div className="index_heading tracking-tight text-[#ffffff]  leading-[-777px] ">
