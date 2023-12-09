@@ -1,6 +1,5 @@
 // import { document } from 'postcss';
-import { useState} from 'react';
-
+import { useState } from "react";
 
 export default function Your_contracts_dashboard() {
   const [yccheck, setyccheck] = useState(true);
@@ -8,20 +7,25 @@ export default function Your_contracts_dashboard() {
     setyccheck(!yccheck);
     // console.log(isChecked);
   };
-  const yourcontracts = yccheck? "block":"hidden"
-  const gaurdcontracts = yccheck?"hidden":"block";
+  const yourcontracts = yccheck ? "block" : "hidden";
+  const gaurdcontracts = yccheck ? "hidden" : "block";
 
   return (
     <>
-      <div >
-        <div  className={`flex justify-center items-center my-10 ${yourcontracts}`}>
+      <div>
+        <div
+          className={`flex justify-center items-center my-10 ${yourcontracts}`}
+        >
           <div className="flex flex-col my-2 items-center justify-center">
             <div className="text-[24px] flex flex-row items-center justify-center my-2 border-[1px] rounded-[10px] bg-[#060606] border-[#2C2C2C] px-1 py-1">
               <div className="px-10 py-2 bg-[#6543D0] rounded-[10px]  text-[#fff] mx-1 font-semibold">
                 {" "}
                 Your Contracts
               </div>
-              <div className="px-10 py-2  rounded-[10px]  text-[#6F6F6F] mx-1 font-semibold hover:cursor-pointer" onClick={handleCheckboxChange}>
+              <div
+                className="px-10 py-2  rounded-[10px]  text-[#6F6F6F] mx-1 font-semibold hover:cursor-pointer"
+                onClick={handleCheckboxChange}
+              >
                 {" "}
                 Gaurd Contracts
               </div>
@@ -581,10 +585,15 @@ export default function Your_contracts_dashboard() {
       </div>
 
       <div>
-        <div className={`flex block justify-center items-center my-10 ${gaurdcontracts}`}>
+        <div
+          className={`flex block justify-center items-center my-10 ${gaurdcontracts}`}
+        >
           <div className="flex flex-col my-2 items-center justify-center">
             <div className="text-[24px] flex flex-row items-center justify-center my-2 border-[1px] rounded-[10px] bg-[#060606] border-[#2C2C2C] px-1 py-1">
-              <div className="px-10 py-2 rounded-[10px]  text-[#6F6F6F] mx-1 font-semibold hover:cursor-pointer"  onClick={handleCheckboxChange}>
+              <div
+                className="px-10 py-2 rounded-[10px]  text-[#6F6F6F] mx-1 font-semibold hover:cursor-pointer"
+                onClick={handleCheckboxChange}
+              >
                 {" "}
                 Your Contracts
               </div>
