@@ -173,6 +173,19 @@ input:checked ~ label::before {
 .navButton:hover {
   background-color: #331b82;
 }
+
+.navButtonWhite {
+  padding: 0.5rem 1rem;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.navButtonWhite:hover {
+  background-color: #dddddd;
+}
 .navButton2 {
   padding: 5rem 1rem;
   background-color: #6543d0;

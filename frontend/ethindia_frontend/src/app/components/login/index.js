@@ -2,22 +2,14 @@
 
 import { Button, Modal } from 'flowbite-react';
 import { useState,useEffect } from 'react';
-import { LogInWithAnonAadhaar, useAnonAadhaar,AnonAadhaarProof} from "anon-aadhaar-react";
 import axios, * as others from "axios";
+import Verify_aadhar from '../verify_aadhar';
 const { ethers } = require("ethers");
 
 function Login() {
   const [openModal, setOpenModal] = useState(false);
-  const [file, setFile] = useState(null);
-  const [anonAadhaar] = useAnonAadhaar();
 
-  useEffect(() => {
-    console.log("Anon Aadhaar status: ", anonAadhaar.status);
-  }, [anonAadhaar]);
 
-  const handleFileChange = (event) => {
-    setFile(event.target.files[0]);
-  };
   return (
     <>
       <button className="navButton" onClick={() => setOpenModal(true)}>Login to continue</button>
@@ -45,26 +37,8 @@ function Login() {
             Upload Signed Aadhar
           </div> */}
 
-          <div >
-            <LogInWithAnonAadhaar className="LoginAnonAadhar"/>
-            {/* <p>{anonAadhaar?.status }</p> */}
-          </div>
-
           <div>
-            {anonAadhaar?.status === "logged-in" && (
-              <>
-                <p>✅ Proof is valid</p>
-
-                console.log(anonAadhaar)
-                console.log("anonAadhaar")
-                
-                console.log(anonAadhaar.serializedPCD )
-
-                <AnonAadhaarProof
-                  code={JSON.stringify(anonAadhaar, null, 2)}
-                />
-              </>
-            )}
+            <Verify_aadhar></Verify_aadhar>
           </div>
 
           <div className="flex flex-row justify-center items-center my-2">

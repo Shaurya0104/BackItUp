@@ -15,6 +15,8 @@ const hi = async () => {
   const testFile = './beneficiary.pdf'
   const pdfRaw = fs.readFileSync(testFile)
   const pdfBuffer = Buffer.from(pdfRaw)
+  console.log(pdfBuffer)
+
   const extractedData = await extractWitness(pdfBuffer, 'beneficiary123')
 
   if (extractedData instanceof Error) throw new Error(extractedData.message)
