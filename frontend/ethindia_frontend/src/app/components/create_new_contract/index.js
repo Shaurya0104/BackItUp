@@ -1,7 +1,35 @@
+import { useState } from "react";
+
 export default function Create_new_contract() {
+  const addnewgaurdian = () => {};
+
+  const [isChecked, setIsChecked] = useState(true);
+  const addnewfund = ()=>{
+
+  };
+  const done=()=>{
+    
+  }
+
+  const handleCheckboxChange = (e) => {
+    setIsChecked(!isChecked);
+    console.log(isChecked);
+  };
+  const customize_execution_terms1 = isChecked
+    ? "rounded-[10px] border-[#462AA0] border-[2px] border-solid "
+    : "rounded-[10px] border-transparent border-[2px] border-solid ";
+  const customize_execution_terms2 = isChecked
+    ? "rounded-[10px] border-transparent border-[2px] border-solid "
+    : "rounded-[10px] border-[#462AA0] border-[2px] border-solid ";
+  const customize_execution_terms11 = isChecked
+    ? "rounded-[12px] border-[#2E175A] border-[2px] border-solid "
+    : "rounded-[12px] border-transparent border-[2px] border-solid ";
+  const customize_execution_terms22 = isChecked
+    ? "rounded-[12px] border-transparent border-[2px] border-solid "
+    : "rounded-[12px] border-[#2E175A] border-[2px] border-solid ";
   return (
-    <div className="inline-flex rounded-[10px] flex-col items-start gap-[24px] p-[24px] relative bg-black border border-solid border-[#2b2b2b]">
-      <div className="inline-flex items-center justify-center gap-[8px] relative flex-[0_0_auto]">
+    <div className="flex rounded-[10px] flex-col items-start gap-[24px] p-[24px] relative bg-black border border-solid border-[#2b2b2b]">
+      <div className="flex items-center justify-center gap-[8px] relative flex-[0_0_auto]">
         <img
           className="relative w-[24px] h-[24px]"
           alt="Plus"
@@ -16,19 +44,27 @@ export default function Create_new_contract() {
         alt="Line"
         src="images\Line 4.png"
       />
-      <div className="relative w-[440px] h-[90px]">
-        <div className="absolute -top-px left-0 [font-family:'Inter-SemiBold',Helvetica] font-semibold text-white text-[18px] text-center tracking-[0] leading-[normal]">
+      <div className="relative ">
+        <div className=" [font-family:'Inter-SemiBold',Helvetica] font-semibold text-white text-[18px]  tracking-[0] leading-[normal]">
           Beneficiary
         </div>
-        <div className="flex flex-col w-[440px] h-[52px] items-center justify-center gap-[8px] px-[99px] py-[10px] absolute top-[38px] left-0 rounded-[8px] overflow-hidden border border-solid border-[#2b2b2b]">
-          <div className="inline-flex items-center gap-[12px] relative flex-[0_0_auto]">
-            <img
-              className="relative w-[24px] h-[24px]"
-              alt="Plus"
-              src="images\Plus.svg"
-            />
-            <div className="relative w-fit [font-family:'Montserrat-Medium',Helvetica] font-medium text-[#c9c9c9] text-[16px] tracking-[0] leading-[normal]">
-              Add a beneficiary
+        <div className="flex flex-col items-center">
+          <div className="flex flex-row my-2">
+            <div className="text-[#fff]">Name :</div>
+            <div className="ml-8">
+              <input
+                className="bg-transparent border-[1px] rounded-[10px] border-[#462AA0] text-[#fff] px-1"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="flex flex-row ">
+            <div className="text-[#fff]">Nullifier :</div>
+            <div className="ml-5">
+              <input
+                className="bg-transparent border-[1px] rounded-[10px] border-[#462AA0] text-[#fff] px-1"
+                type="text"
+              />
             </div>
           </div>
         </div>
@@ -39,8 +75,48 @@ export default function Create_new_contract() {
         src="images\Line 4.png"
       />
       <div className="inline-flex flex-col items-start gap-[16px] relative flex-[0_0_auto]">
-        <div className="relative w-fit mt-[-1.00px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-white text-[18px] tracking-[0] leading-[normal]">
+        <div className=" [font-family:'Inter-SemiBold',Helvetica] font-semibold text-white text-[18px] tracking-[0] leading-[normal]">
           Guardians
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="flex flex-row my-2">
+            <div className="text-[#fff]">Gaurdian 1 Name :</div>
+            <div className="ml-8">
+              <input
+                className="bg-transparent border-[1px] rounded-[10px] border-[#462AA0] text-[#fff] px-1"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="flex flex-row ">
+            <div className="text-[#fff]">Gaurdian 1 Nullifier :</div>
+            <div className="ml-5">
+              <input
+                className="bg-transparent border-[1px] rounded-[10px] border-[#462AA0] text-[#fff] px-1"
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="flex flex-row my-2">
+            <div className="text-[#fff]">Gaurdian 1 Name :</div>
+            <div className="ml-8">
+              <input
+                className="bg-transparent border-[1px] rounded-[10px] border-[#462AA0] text-[#fff] px-1"
+                type="text"
+              />
+            </div>
+          </div>
+          <div className="flex flex-row ">
+            <div className="text-[#fff]">Gaurdian 1 Nullifier :</div>
+            <div className="ml-5">
+              <input
+                className="bg-transparent border-[1px] rounded-[10px] border-[#462AA0] text-[#fff] px-1"
+                type="text"
+              />
+            </div>
+          </div>
         </div>
         <div className="flex flex-col w-[440px] h-[52px] items-center justify-center gap-[8px] px-[99px] py-[10px] relative rounded-[8px] overflow-hidden border border-solid border-[#2b2b2b]">
           <div className="inline-flex items-center gap-[12px] relative flex-[0_0_auto]">
@@ -49,7 +125,10 @@ export default function Create_new_contract() {
               alt="Plus"
               src="images\Plus.svg"
             />
-            <div className="relative w-fit [font-family:'Montserrat-Medium',Helvetica] font-medium text-[#c9c9c9] text-[16px] tracking-[0] leading-[normal]">
+            <div
+              onClick={addnewgaurdian}
+              className="hover:cursor-pointer relative w-fit [font-family:'Montserrat-Medium',Helvetica] font-medium text-[#c9c9c9] text-[16px] tracking-[0] leading-[normal]"
+            >
               Add new guardian
             </div>
           </div>
@@ -60,38 +139,57 @@ export default function Create_new_contract() {
         alt="Line"
         src="images\Line 4.png"
       />
-      <div className="relative w-[440px] h-[184px]">
-        <div className="absolute -top-px left-0 [font-family:'Inter-SemiBold',Helvetica] font-semibold text-[18px] text-white tracking-[0] leading-[normal]">
+      <div className="">
+        <div className=" [font-family:'Inter-SemiBold',Helvetica] font-semibold text-[18px] text-white tracking-[0] leading-[normal]">
           Auto-execute terms
         </div>
-        <div className="absolute w-[440px] h-[146px] top-[38px] left-0">
-          <div className="flex w-[440px] items-center gap-[16px] px-[16px] py-[12px] absolute top-0 left-0 bg-black rounded-[8px] overflow-hidden border border-solid border-[#6543d0] shadow-button-drop-shadow">
-            <img
-              className="relative w-[16px] h-[16px]"
-              alt="Frame"
-              src="images/Frame 61.png"
-            />
-            <div className="inline-flex flex-col items-start justify-center gap-[8px] relative flex-[0_0_auto] mr-[-3.00px]">
-              <p className="relative w-[379px] mt-[-1.00px] [font-family:'Inter_Tight-Regular',Helvetica] font-normal text-[12px] text-white tracking-[0] leading-[normal]">
-                Auto-execute recovery if the account is inactive for
-              </p>
-              <div className="relative w-[379px] [font-family:'Inter-Regular',Helvetica] font-normal text-[#989898] text-[15px] tracking-[0] leading-[normal] underline">
-                7 years
-              </div>
+        <div className={`${customize_execution_terms11}  mt-4`}>
+          <div className={`flex items-center  ${customize_execution_terms1}`}>
+            <div className="flex items-center justify-center px-2">
+              <input
+                type="checkbox"
+                checked={isChecked}
+                onChange={handleCheckboxChange}
+                id="custom-checkbox1"
+                className="index_checkbox  border-2 border-[#6543D0]"
+              />
             </div>
-          </div>
-          <div className="flex w-[440px] items-center gap-[16px] px-[16px] py-[12px] absolute top-[81px] left-0 rounded-[8px] overflow-hidden border border-solid border-[#2b2b2b]">
-            <div className="relative w-[16px] h-[16px] rounded-[4px] border border-solid border-[#2b2b2b]" />
-            <div className="inline-flex flex-col items-start justify-center gap-[8px] relative flex-[0_0_auto] mr-[-3.00px]">
-              <div className="relative w-[379px] mt-[-1.00px] [font-family:'Inter_Tight-Regular',Helvetica] font-normal text-[12px] text-white tracking-[0] leading-[normal]">
-                Auto-execute recovery on
-              </div>
-              <div className="relative w-[379px] [font-family:'Inter-Regular',Helvetica] font-normal text-[#989898] text-[15px] tracking-[0] leading-[normal] underline">
-                DD|MM|YYYY
-              </div>
+
+            <div className="flex justify-center items-center pl-2 py-2 px-2">
+              <label
+                htmlFor="custom-checkbox1"
+                // className="cursor-pointer w-6 h-6 rounded-md border-2 border-purple-500 flex items-center justify-center"
+                className="text-[#fff] text-[12px]"
+              >
+                Auto-execute recovery if the account is inactive for <input  type="text" className="w-4 mx-1 bg-transparent text-[#fff] appearance-none" placeholder="0" /> year(s)
+              </label>
             </div>
           </div>
         </div>
+
+        <div className={`${customize_execution_terms22}`}>
+          <div className={`flex items-center  ${customize_execution_terms2}`}>
+            <div className="flex justify-center px-2">
+              <input
+                type="checkbox"
+                checked={!isChecked}
+                onChange={handleCheckboxChange}
+                id="custom-checkbox2"
+                className="index_checkbox  border-2 border-[#6543D0]"
+              />
+            </div>
+            <div className="pl-2 px-2 py-2">
+              <label
+                htmlFor="custom-checkbox2"
+                // className="cursor-pointer w-6 h-6 rounded-md border-2 border-purple-500 flex items-center justify-center"
+                className="text-[#fff] text-[12px]"
+              >
+                Auto-execute recovery on <input type="date" className="bg-transparent ml-1" />
+              </label>
+            </div>
+          </div>
+        </div>
+
       </div>
       {/* <hr /> */}
       <img
@@ -110,14 +208,14 @@ export default function Create_new_contract() {
               alt="Plus"
               src="images\Plus.svg"
             />
-            <div className="relative w-fit [font-family:'Montserrat-Medium',Helvetica] font-medium text-[#c9c9c9] text-[16px] tracking-[0] leading-[normal]">
+            <div onclick={addnewfund} className="hover:cursor-pointer relative w-fit [font-family:'Montserrat-Medium',Helvetica] font-medium text-[#c9c9c9] text-[16px] tracking-[0] leading-[normal]">
               Add new fund
             </div>
           </div>
         </div>
       </div>
       <div className="inline-flex items-center justify-center gap-[8px] px-[194px] py-[20px] relative flex-[0_0_auto] bg-[#6543d0] rounded-[12px] overflow-hidden">
-        <div className="relative w-fit mt-[-1.00px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-white text-[20px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
+        <div onclick={done} className="hover:cursor-pointer relative w-fit mt-[-1.00px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-white text-[20px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
           Done
         </div>
       </div>

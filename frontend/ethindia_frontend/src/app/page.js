@@ -13,7 +13,6 @@ import Page2 from './components/page2'
 import Topbar from './components/topbar'
 import Wallet_connect_model from './components/wallet_connect_model'
 import Wallet_model from './components/wallet_model'
-import Wireframe_6 from './components/wireframe_6'
 import Your_contracts_dashboard from './components/your_contracts_dashboard'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
@@ -45,4 +44,5 @@ export default function Home() {
       </div>
     </AnonAadhaarProvider>
   );
+
 }

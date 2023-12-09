@@ -27,22 +27,24 @@ export default function Intro() {
       <div className="indexclass_background"></div>
       <div
         id="about"
-        className="scroll-mt-20 justify-center items-center my-20 "
+        className="scroll-mt-20 justify-center items-center my-15 "
       >
-        <div className="py-16 items-center text-center md:space-y-[-1rem] ">
+        <div className="py-10 items-center text-center md:space-y-[-1rem] ">
           <div className="index_heading tracking-tight text-[#ffffff]  leading-[-777px] ">
             <h1 className="index_heading tracking-tight text-[#ffffff]  leading-[-777px] ">
               {/* On-Chain Backup &{" "} */}
-              Lorem ipsum dolor sit.{" "}
+              Crypto Backup &{" "}
             </h1>
-            <h1 className="index_heading2">Lorem ipsum dolor sit amet.</h1>
+            {/* <h1 className="index_heading2">Built completely On-Chain</h1> */}
+            {/* <h1 className="index_heading2">&</h1> */}
+            <h1 className="index_heading2">Recovery system</h1>
             {/* <h1 className="index_heading2">Will&nbsp;for&nbsp;Crypto</h1> */}
           </div>
 
           <p className=" font-medium tracking-tight text-[#B0B0B0]  text-[16px] lg:text-[18px] py-12 px-8 md:px-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam temporibus nemo quis odio, earum quod.
-            {/* Create a smart contract that can recover your crypto if you lose
-            access to your wallet or die. */}
+            {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam temporibus nemo quis odio, earum quod. */}
+            Create a smart contract that can recover your crypto if you lose
+            access to your wallet.
             {/* <div className="text-[#ffffff]">hello</div> */}
           </p>
           <Login></Login>
@@ -51,17 +53,15 @@ export default function Intro() {
             hello
           </div> */}
 
-        <div className="flex flex-wrap flex-1 justify-center pt-12 items-center ">
+        <div className="flex flex-wrap flex-1 justify-center pt-5 items-center ">
           {/* <div className=" justify-center pt-12 items-center "> */}
 
           <div className="index_box py-8 px-6 lg:px-12 w-[80%] md:w-[25%] lg:w-[25%] rounded-[24px] bg-black border-[#222222] border-solid border-[2px]  bg-opacity-100 items-center">
             <p className="text-[#fff] text-[20px] tracking-[.025rem]  font-[500]">
-              Lorem, ipsum dolor.
-              {/* Customize execution terms */}
+              Customize execution terms
             </p>
             <p className="text-[10px] lg:text-[15px] text-[#999999] py-2 pb-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, esse modi vero debitis quae commodi?
-              {/* Add terms that auto-executes recovery when conditions match */}
+              Add terms that auto-executes recovery when conditions match
             </p>
             <hr className="index_line" />
             {/* <div className={`flex ${checkfornow}`}> */}
@@ -85,9 +85,8 @@ export default function Intro() {
                     // className="cursor-pointer w-6 h-6 rounded-md border-2 border-purple-500 flex items-center justify-center"
                     className="text-[#fff] text-[12px]"
                   >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    {/* Auto-execute recovery if the account is inactive for __
-                    year(s) */}
+                    Auto-execute recovery if the account is inactive for __
+                    year(s)
                   </label>
                 </div>
               </div>
@@ -116,21 +115,10 @@ export default function Intro() {
                 </div>
               </div>
             </div>
-
-            {/* <div className="text-[12px] lg:text-[14px] text-primary">
-            <label className="pl-2">
-              Auto-execute recovery if the account is inactive for __ year(s)
-              </label>
-            </div> */}
           </div>
-
           <div className="px-4 py-8 max-md:w-[80%] ">
-            {/* <center>
-            <img src="images/plus.svg" className="h-4"></img>
-          </center> */}
           </div>
-          <div className="py-8 px-6 lg:px-12 w-[80%] md:w-[25%]  lg:w-[25%] rounded-[24px] bg-black border-solid border-[2px] border-[#222222]  bg-opacity-100 items-center">
-            {/* <img src="images/design.svg" className="h-8 lg:p-[.2rem]"></img> */}
+          <div className="index_box2 py-8 px-6 lg:px-12 w-[80%] md:w-[25%]  lg:w-[25%] rounded-[24px] bg-black border-solid border-[2px] border-[#222222]  bg-opacity-100 items-center">
             <p className="text-[#ffffff] text-[20px] tracking-[.025rem]  font-[500] ">
               Connect Wallet
             </p>
@@ -149,7 +137,6 @@ export default function Intro() {
                     alt="not found image"
                   ></img>
                 </div>
-
                 <div className="pl-2 text-center px-2 text-[#fff]">
                   Metamask
                 </div>
@@ -188,7 +175,7 @@ export default function Intro() {
             <img src="images/plus.svg" className="h-4"></img>
           </center> */}
           </div>
-          <div className="py-8 px-6 lg:px-12 w-[80%] md:w-[25%]  lg:w-[25%] rounded-[24px] bg-black border-solid border-[2px] border-[#222222]  bg-opacity-100 items-center">
+          <div className="index_box3 py-8 px-6 lg:px-12 w-[80%] md:w-[25%]  lg:w-[25%] rounded-[24px] bg-black border-solid border-[2px] border-[#222222]  bg-opacity-100 items-center">
             {/* <img src="images/design.svg" className="h-8 lg:p-[.2rem]"></img> */}
             <p className="text-[#ffffff] text-[20px] tracking-[.025rem]  font-[500] ">
               Add Nominees
