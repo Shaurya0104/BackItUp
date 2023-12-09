@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Mohave:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: #000;
+}
+
+.indexclass_background {
+  background-image: linear-gradient(#2e175ac3 0.75px, transparent 0.75px),
+    linear-gradient(to right, #2e175ac3 0.75px, transparent 0.75px);
+  background-size: 79.5px 79.5px;
+  background-position-x: center;
+  background-position-y: -2px;
+  position:absolute;
+  height: 100vh;
+  width: 100vw;
+  scroll-behavior: 60%;
+  mask-image: linear-gradient(transparent 10%, black 50%, transparent 90%),
+    linear-gradient(to right, transparent 10%, black 50%, transparent 90%);
+  z-index: -99;
+  transform: translateZ(-10)  ;
+}
+.indexclass_ellipse1 {
+  position: absolute;
+  height: 804px;
+  width: 384px;
+  transform: rotate(-40deg);
+  background: #230f4c;
+  border-radius: 9999px;
+  filter: blur(200px);
+  top: 20vh;
+  left: 15vh;
+
+  z-index: -10;
+}
+.indexclass_ellipse2 {
+  position: absolute;
+  height: 598px;
+  width: 285px;
+  transform: rotate(80deg);
+  background: #1f013d;
+  border-radius: 9999px;
+  filter: blur(180px);
+  top: 40vh;
+  left: 120vh;
+  z-index: -10;
+}
+.index_heading {
+  width: 100%;
+  left: 100vw;
+  text-align: center;
+  color: #ffffff;
+  font-size: 5vw;
+  font-weight: 500;
+
+  font-family: "Inter Tight", sans-serif;
+  line-height: 5vw;
+}
+.index_heading2 {
+  color: #e2e2e2;
+}
+input:checked ~ label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.index_connectwallet {
+  justify-content: center;
+}
+
+.index_line {
+  color: #222222;
+  padding-bottom: 1vw;
+}
+
+.index_checkbox {
+  appearance: none;
+  border-radius: 5px;
+  width: 2.5vh;
+  height: 2.5vh;
+}
+.index_checkbox:hover {
+  cursor: pointer;
+}
+
+.index_checkbox:checked {
+  content: url(/images/whiteTick.png);
+  background: #462aa0;
+}
+
+.navButton {
+  padding: 0.5rem 1rem;
+  background-color: #6543d0;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.navButton:hover {
+  background-color: #331b82;
+}
+.navButton2 {
+  padding: 5rem 1rem;
+  background-color: #6543d0;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.navbarpad {
+  /* padding-left: -100%; */
+  width: 100vw;
+  /* height: 100vh; */
+  background-color: #f80808;
+  z-index: 10;
+  /* top: 0px; */
+  padding-top: 0%;
+}
