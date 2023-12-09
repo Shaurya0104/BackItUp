@@ -1,10 +1,12 @@
 require("@nomicfoundation/hardhat-toolbox");
 
 const endpointUrl = "https://polygon-mumbai.infura.io/v3/714d9bb975a74fc7bd2abc58b6465b3a";
-const privateKey = "b5d5a4b7dfe696a180ab4812aa0c7fe305671483cd0ff4779c52baeae1f220fd";
 const endpointUrlPolygon = "https://polygon-mainnet.infura.io/v3/714d9bb975a74fc7bd2abc58b6465b3a";
 const endpointUrlAvalanche = "https://avalanche-mainnet.infura.io/v3/714d9bb975a74fc7bd2abc58b6465b3a";
 const endpointUrlSepolia = "https://sepolia.infura.io/v3/714d9bb975a74fc7bd2abc58b6465b3a";
+const endpointUrlScrollSepolia = "https://rpc.ankr.com/scroll_sepolia_testnet	";
+const zkEvmTestNet = "https://rpc.public.zkevm-test.net";
+const testLinea = "https://rpc.goerli.linea.build";
 // require("@tenderly/hardhat-tenderly");
 module.exports = {
   solidity: "0.8.19",
@@ -46,6 +48,18 @@ module.exports = {
     },
     sepolia : {
       url: endpointUrlSepolia,
+      accounts : [privateKey],
+    },
+    scroll : {
+      url: endpointUrlScrollSepolia,
+      accounts : [privateKey],
+    },
+    zkEvmTest : {
+      url: zkEvmTestNet,
+      accounts : [privateKey],
+    },
+    lineaTest : {
+      url : testLinea,
       accounts : [privateKey],
     },
   },
