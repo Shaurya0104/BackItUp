@@ -1,7 +1,7 @@
 export default function Your_contracts_dashboard() {
   return (
     <div>
-      <nav className="z-50 flex flex-row justify-between items-center w-[100vw] bg-[#222222] h-[6vh] px-8">
+      {/* <nav className="z-50 flex flex-row justify-between items-center w-[100vw] bg-[#222222] h-[6vh] px-8">
         <div className="items-center flex flex-row justify-center text-[#fff] rounded-[10px] bg-[#0D061D] px-2 py-1.5 w-20 h-10"></div>
         <div className="items-center flex flex-row justify-center ">
           <div className="text-[#fff] flex flex-row justify-center items-center rounded-[10px] bg-[#000] px-2 py-2 mx-2">
@@ -20,7 +20,7 @@ export default function Your_contracts_dashboard() {
             Logout
           </div>
         </div>
-      </nav>
+      </nav> */}
 
       <div className="flex justify-center items-center my-10">
         <div className="flex flex-col my-2 items-center justify-center">
