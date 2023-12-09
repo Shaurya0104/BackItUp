@@ -30,7 +30,7 @@ export default function Page2() {
               <img src="\images\CurrencyBtc.png" alt="not found" />
             </div>
             <div className="text-[#fff]  my-2 justify-center flex text-[20px] font-bold">
-              120% of all BTC
+              20% of all BTC
             </div>
             <div className="text-[#999999] justify-center flex">
               Is lost and forever

@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "anon-aadhaar-pcd": "^0.1.14",
     "anon-aadhaar-react": "^0.1.14",
     "ethers": "^6.9.0",
