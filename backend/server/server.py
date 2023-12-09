@@ -88,6 +88,29 @@ def handle_post_request():
     except Exception as e:
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    try:
+        uploaded_file = request.files['file']
+        filePath = os.getcwd() + '/uploads/' + uploaded_file.filename
+        uploaded_file.save( filePath)
+        
+        os.system(f"cp {filePath} ../../anon-aadhaar-main/ " )
+        os.system(f"cd ../../anon-aadhaar-main && yarn pdf:pcd {uploaded_file.filename} {request.get_json().get('password')}")
+        os.system(f"cp ../../anon-aadhaar-main/packages/anon-aadhaar-pcd/build/pdf/{uploaded_file.filename} ./uploads/{uploaded_file.filename.strip('.pdf')}_signed.pdf")
+        
+        return jsonify({'message': 'File uploaded successfully'})
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
+@app.route('/download/<filename>', methods=['GET'])
+def download_file(filename):
+    try:
+        file_path = './uploads/' + filename
+        return send_file(file_path, as_attachment=True)
+    except Exception as e:
+        return jsonify({'error': str(e)})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
