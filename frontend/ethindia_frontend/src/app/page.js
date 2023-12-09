@@ -10,6 +10,9 @@ import Logout_model from './components/logoutmodel'
 import Network_model from './components/network_model'
 import Page2 from './components/page2'
 import Topbar from './components/topbar'
+import Wallet_connect_model from './components/wallet_connect_model'
+import Wallet_model from './components/wallet_model'
+import Wireframe_6 from './components/wireframe_6'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
@@ -30,6 +33,10 @@ export default function Home() {
       <Create_new_contract></Create_new_contract>
       <Network_model></Network_model>
       <Topbar></Topbar>
+      <Wallet_connect_model></Wallet_connect_model>
+      <Wallet_model></Wallet_model>
+      <Wireframe_6></Wireframe_6>
+      
     </main>
     </div>
   )
