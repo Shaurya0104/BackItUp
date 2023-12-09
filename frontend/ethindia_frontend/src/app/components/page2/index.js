@@ -1,6 +1,6 @@
 export default function Page2() {
   return (
-    <div >
+    <div className="my-24" >
       <div className="page2_ellipse1">
       </div>
       <div className="flex items-center justify-center z-10  ">
@@ -41,11 +41,11 @@ export default function Page2() {
           </div>
         </div>
       </div>
-      <div className="mt-20 mb-10 ">
+      <div className="my-[8rem] tempcheck flex justify-center items-center">
         {/* <div className="h-[18rem] w-[51.5rem] border-[2px] rounded-[10px] border-[#2c2c2c] mx-3 flex justify-center items-center"> */}
-        <div className="h-[18rem] w-[70rem] border-[2px] rounded-[10px] border-[#2c2c2c] mx-3 flex justify-center items-center">
-        <div className="page2_container_background h-[17.5rem] w-[70rem]"></div>
-        <div className="page2_container_background2 h-[17.5rem] w-[70rem]"></div>
+        <div className="h-[18rem] w-[58.3rem] border-[2px] rounded-[10px] border-[#2c2c2c] mx-3 flex justify-center items-center">
+        <div className="page2_container_background h-[17.5rem] w-[58.3rem]"></div>
+        <div className="page2_container_background2 h-[17.5rem] w-[58.3rem]"></div>
           <div className="page2_line flex justify-center items-center">
             {" "}
             <img src="\images\Line 3L.svg" alt="not found " />

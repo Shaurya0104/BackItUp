@@ -252,3 +252,6 @@ input:checked ~ label::before {
 }
 
 
+.tempcheck{
+  transform: scale(1.2);
+}
