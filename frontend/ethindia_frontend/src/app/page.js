@@ -13,7 +13,7 @@ import Topbar from './components/topbar'
 import Wallet_connect_model from './components/wallet_connect_model'
 import Wallet_model from './components/wallet_model'
 import Wireframe_6 from './components/wireframe_6'
-
+import Your_contracts_dashboard from './components/your_contracts_dashboard'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 
@@ -36,7 +36,7 @@ export default function Home() {
       <Wallet_connect_model></Wallet_connect_model>
       <Wallet_model></Wallet_model>
       <Wireframe_6></Wireframe_6>
-      
+      <Your_contracts_dashboard></Your_contracts_dashboard>
     </main>
     </div>
   )
