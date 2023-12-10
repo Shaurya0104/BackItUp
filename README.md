@@ -65,3 +65,20 @@ And stories like [these](https://dailyhodl.com/2023/11/07/banker-loses-access-to
 ## User flow
 ### A detailed [user flow chart can be found here](https://drive.google.com/file/d/1c-n2Is1LTYWWP45HjkSQkdZcUYsDnaBD/view?usp=sharing)
 
+## Integrated Services 
+
+### 1. Anon Aadhaar - Anon Aadhaar is used for user account login.
+
+### 2. Safe - We have built our own safe recovery module and integrated both the Protocol and API kits in BackItUp. 
+
+### 3. AirStack - AirStack API is used for fetching EOA's last active blocktime.
+
+### 4. Chainlink Functions - Chainlink Functions are used for calling AirStack API and activating the recovery mode in our recovery contract. 
+
+### 5. Push Protocol - Push Protocol Broadcast Notifications are used for each step of the recovery process. 
+
+### 6. Polygon zkEVM - BackItUp has been deployed to Polygon zkEVM. 
+
+### 7. Scroll - BackItUp has been deployed to Scroll. 
+
+### 8. Metamask GasAPI - GasAPI has been used for gas prices of transactions. 
